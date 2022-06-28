@@ -1,3 +1,3 @@
 #!/usrf/bin/python3
 number = 98
-print("{} Battery street".format(number))
+print(f"{number} Battery street")
