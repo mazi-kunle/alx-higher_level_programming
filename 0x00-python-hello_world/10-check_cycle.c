@@ -54,6 +54,7 @@ int check_cycle(listint_t *list)
 		}
 		temp = temp->next;
 	}
+	free(arr);
 	if (flag == 1)
 	{
 		return (0);
