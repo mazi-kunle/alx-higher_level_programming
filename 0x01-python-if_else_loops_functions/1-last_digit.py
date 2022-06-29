@@ -9,4 +9,3 @@ elif (int(last_num) == 0):
     print("and is 0")
 elif (int(last_num) < 6 or number < 0):
     print("and is less than 6 and not 0")
-
