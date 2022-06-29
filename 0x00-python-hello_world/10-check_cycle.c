@@ -9,7 +9,7 @@
 */
 int check_add(listint_t *ptr, listint_t **arr)
 {
-	int length = sizeof(arr) / sizeof(int);
+	int length = 32;
 	int i;
 
 	for (i = 0; i < length; i++)
@@ -51,6 +51,7 @@ int check_cycle(listint_t *list)
 		else
 		{
 			flag = 0;
+			break;
 		}
 		temp = temp->next;
 	}
