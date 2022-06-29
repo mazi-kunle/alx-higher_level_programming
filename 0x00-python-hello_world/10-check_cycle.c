@@ -9,7 +9,7 @@
 */
 int check_add(listint_t *ptr, listint_t **arr)
 {
-	int length = 16;
+	int length = 100;
 	int i;
 
 	for (i = 0; i < length; i++)
@@ -31,7 +31,7 @@ int check_add(listint_t *ptr, listint_t **arr)
 int check_cycle(listint_t *list)
 {
 	listint_t *temp;
-	listint_t **arr = malloc(16 * sizeof(listint_t *));
+	listint_t **arr = malloc(100 * sizeof(listint_t *));
 	int i = 0;
 	int flag;
 
