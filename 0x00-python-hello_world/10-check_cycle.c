@@ -7,7 +7,7 @@
  *
  * Return: 0 if address not present and 1 if present.
 */
-int check_add(listint *ptr, unsigned int *arr)
+int check_add(listint_t *ptr, listint_t **arr)
 {
 	int length = sizeof(arr) / sizeof(int);
 	int i;
@@ -31,10 +31,11 @@ int check_add(listint *ptr, unsigned int *arr)
 int check_cycle(listint_t *list)
 {
 	listint_t *temp;
-	unsigned int arr[32];
+	listint_t **arr = malloc(32 * sizeof(listint_t *));
 	int i = 0;
+	int flag;
 
-	if (list == null)
+	if (list == NULL)
 	{
 		return (0);
 	}
