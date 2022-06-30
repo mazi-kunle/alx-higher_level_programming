@@ -1,3 +1,2 @@
 #!/bin/bash
-export PYFILEc=main.pyc
 python3 -c "import py_compile; py_compile.compile('$PYFILE', '$PYFILEc')"
