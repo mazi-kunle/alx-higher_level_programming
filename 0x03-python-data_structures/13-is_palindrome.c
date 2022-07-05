@@ -1,5 +1,32 @@
 #include "lists.h"
 #include <stddef.h>
+
+/**
+ * reverse_list- a function that reverses a linked list.
+ * @head: head of the linked list.
+ *
+*/
+
+void reverse_list(listint_t **head)
+{
+	listint_t *prev, *curr, *next;
+
+	if (*head != NULL)
+	{
+		prev = NULL;
+		next = NULL;
+		curr = *head;
+		while (curr != NULL)
+		{
+			next = curr->next;
+			curr->next = prev;
+			prev = curr;
+			curr = next;
+		}
+		*head = prev;
+	}
+}
+
 /**
  * is_palindrome- a function that checks if a singly linked list is a
  * palindrome.
@@ -7,8 +34,6 @@
  *
  * Return: int.
 */
-void reverse_list(listint_t **head);
-
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *prev;
@@ -44,29 +69,3 @@ int is_palindrome(listint_t **head)
 		return (1);
 	}
 }
-
-/**
- * reverse_list- a function that reverses a linked list.
- * @head: head of the linked list.
- *
-*/
-void reverse_list(listint_t **head)
-{
-	listint_t *prev, *curr, *next;
-
-	if (*head != NULL)
-	{
-		prev = NULL;
-		next = NULL;
-		curr = *head;
-		while (curr != NULL)
-		{
-			next = curr->next;
-			curr->next = prev;
-			prev = curr;
-			curr = next;
-		}
-		*head = prev;
-	}
-}
-
