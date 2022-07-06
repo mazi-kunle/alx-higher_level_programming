@@ -9,9 +9,11 @@ def best_score(a_dictionary):
     elif len(a_dictionary) == 0:
         return None
 
-    key = a_dictionary[0]
+    key = 0
+    new = None
     for i in a_dictionary:
         if a_dictionary[i] > key:
             key = a_dictionary[i]
+            new = i
 
-    return key
+    return new
