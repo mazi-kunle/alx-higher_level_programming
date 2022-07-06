@@ -15,7 +15,7 @@ if __name__ == "__main__":
     for i in lst:
         if (i[1] == sys.argv[2]):
             result = i[0](int(sys.argv[1]), int(sys.argv[3]))
-    print('{} <{}> {} = {}'.format(
+    print('{} {} {} = {}'.format(
         sys.argv[1],
         sys.argv[2],
         sys.argv[3],
