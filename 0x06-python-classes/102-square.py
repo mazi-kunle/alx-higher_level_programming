@@ -29,24 +29,24 @@ class Square:
 
     def __eq__(self, other):
         '''A magic method for equality'''
-        return self.area == other.area
+        return self.area() == other.area()
 
     def __ge__(self, other):
         '''A magic method for >='''
-        return self.area >= other.area
+        return self.area() >= other.area()
 
     def __gt__(self, other):
         '''A magic method for >'''
-        return self.area > other.area
+        return self.area() > other.area()
 
     def __ne__(self, other):
         '''A magic method for !='''
-        return self.area != other.area
+        return self.area() != other.area()
 
     def __le__(self, other):
         '''A magic method for <='''
-        return self.area <= other.area
+        return self.area() <= other.area()
 
     def __lt__(self, other):
         '''A magic method for <'''
-        return self.area < other.area
+        return self.area() < other.area()
