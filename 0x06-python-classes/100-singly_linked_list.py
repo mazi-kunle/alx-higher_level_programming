@@ -7,7 +7,7 @@ class Node:
     def __init__(self, data, next_node=None):
         '''An init function'''
         self.data = data
-        self.__next_node = next_node
+        self.next_node = next_node
 
     @property
     def data(self):
