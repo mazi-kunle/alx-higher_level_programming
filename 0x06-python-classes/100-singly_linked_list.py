@@ -3,6 +3,7 @@
 
 
 class Node:
+    '''A Node class'''
     def __init__(self, data, next_node=None):
         '''An init function'''
         self.__data = data
