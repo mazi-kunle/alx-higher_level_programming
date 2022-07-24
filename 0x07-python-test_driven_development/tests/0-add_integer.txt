@@ -21,5 +21,16 @@ Test with a:int b:default
         198
 Test with a:string b:int
         >>> add_integer("str", 23)
-        Traceback (
+        Traceback (most recent call last)
+        TypeError('a must be an integer')
+Test with a:float b:dict
+        >>> add_integer(3.5, {1: 'a'})
+        Traceback (most recent call last)
+        TypeError('b must be an integer')
+Test with a:string b:string
+        >>> add_integer("a", "b")
+        Traceback (most recent call last)
+        TypeError('a must be an integer')
+        
+
             
