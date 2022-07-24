@@ -3,7 +3,7 @@ Test for add_integer.
 Usage add_integer(a, b)
 =======================
 
-	>>> from 0-add_integer import add_int
+	>>> from 0-add_integer import add_integer
 
 Test with a:float b:int
         >>> add_integer(2.2, 5)
