@@ -1,9 +1,25 @@
-The test module
-===============
-
-================
+Test for add_integer.
+======================
+Usage add_integer(a, b)
+=======================
 
 	>>> from 0-add_integer import add_int
-Now use it:
-
-	>>> add_integer(
+Test with a:float b:int
+        >>> add_integer(2.2, 5)
+        7
+Test with a:float b:float
+        >>> add_integer(3.0, 5.2)
+        8
+Test with a:int b:int
+        >>> add_integer(4, -2)
+        2
+Test with a:int b:int
+        >>> add_integer(-32, -9)
+        -41
+Test with a:int b:default
+        >>> add_integer(100)
+        198
+Test with a:string b:int
+        >>> add_integer("str", 23)
+        Traceback (
+            
