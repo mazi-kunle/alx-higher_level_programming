@@ -3,7 +3,7 @@ Test for add_integer.
 Usage add_integer(a, b)
 =======================
 
-	>>> from 0-add_integer import add_integer
+	>>> add_integer = __import__('0-add_integer').add_integer
 
 Test with a:float b:int
         >>> add_integer(2.2, 5)
@@ -27,22 +27,22 @@ Test with a:int b:default
 
 Test with a:string b:int
         >>> add_integer("str", 23)
-        Traceback (most recent call last)
+        Traceback (most recent call last):
         TypeError: a must be an integer
 
 Test with a:float b:dict
         >>> add_integer(3.5, {1: 'a'})
-        Traceback (most recent call last)
+        Traceback (most recent call last):
         TypeError: b must be an integer
 
 Test with a:string b:string
         >>> add_integer("a", "b")
-        Traceback (most recent call last)
+        Traceback (most recent call last):
         TypeError: a must be an integer
 
 Test with a:None b:default
         >>> add_integer(None)
-        Traceback (most recent call last)
+        Traceback (most recent call last):
         TypeError: a must be an integer
         
 
