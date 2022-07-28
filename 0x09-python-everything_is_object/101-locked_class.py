@@ -9,14 +9,4 @@ class LockedClass:
     prevents the user from dynamically creating new instance
     attributes,except if the new instance attribute is called first_name.
     '''
-    def __init__(self):
-        '''An init function'''
-        pass
-
-    def __setattr__(self, attribute, value):
-        '''A custom setattr function'''
-        if attribute != 'first_name':
-            raise AttributeError("\'LockedClass\' object has no"
-                                 " attribute \'{}\'".format(attribute))
-        else:
-            self.__dict__[attribute] = value
+    __slots__ = ['first_name']
