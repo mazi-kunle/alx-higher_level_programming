@@ -21,7 +21,7 @@ unle
 
 >>> text_indentation()
 Traceback (most recent call last):
-TypeError: text_indentation missing 1 required positional argument: 'test'
+TypeError: text_indentation() missing 1 required positional argument: 'test'
 
 >>> text_indentation("olak? un. le")
 olak?
