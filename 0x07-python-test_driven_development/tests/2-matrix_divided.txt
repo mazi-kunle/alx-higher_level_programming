@@ -40,4 +40,5 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([[1, float('inf')], [3,4]], 6)
+Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
