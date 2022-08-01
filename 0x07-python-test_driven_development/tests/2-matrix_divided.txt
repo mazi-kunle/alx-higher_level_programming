@@ -37,7 +37,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([[1, float('nan')], [3,4]], 6)
 Traceback (most recent call last):
-OverflowError: cannot convert float NaN to integer
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([[1, float('inf')], [3,4]], 6)
-OverflowError: cannot convert float infinity to integer
+TypeError: matrix must be a matrix (list of lists) of integers/floats
