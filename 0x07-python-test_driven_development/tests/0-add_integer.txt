@@ -58,9 +58,9 @@ Test with a:nan b:default
 Test with a:inf b:default
 	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
-	ValueError: cannot convert float infinity to integer
+	OverflowError: cannot convert float infinity to integer
 	
 Test with a:int b:inf
 	>>> add_integer(2, float('inf'))
 	Traceback (most recent call last):
-	ValueError: cannot convert float infinity to integer
+	OverflowError: cannot convert float infinity to integer
