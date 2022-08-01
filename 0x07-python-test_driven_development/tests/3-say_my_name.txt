@@ -13,9 +13,9 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name("edwin, "clark")
+>>> say_my_name("edwin", "clark")
 My name is edwin clark
 
 >>> say_my_name()
 Traceback (most recent call last)
-TypeError: say_my_name missing 2 required positional arguments: first_name and last_name
+TypeError: say_my_name missing 1 required positional arguments: first_name
