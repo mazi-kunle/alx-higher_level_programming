@@ -2,7 +2,7 @@
 '''This is a module'''
 
 
-class MyLsit(list):
+class MyList(list):
     '''
     A My list class
     '''
