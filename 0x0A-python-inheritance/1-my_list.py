@@ -11,4 +11,4 @@ class MyLsit(list):
         print a list in ascending order.
         '''
         new_list = sorted(self)
-        return new_list
+        print(new_list)
