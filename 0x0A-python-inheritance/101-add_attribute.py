@@ -2,7 +2,7 @@
 '''This is a module'''
 
 
-def add_attribute(cls, attr, name):
+def add_attribute(obj, attr, name):
     '''
     a function that adds a new attribute
     to an object if it’s possible.
