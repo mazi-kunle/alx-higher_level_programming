@@ -31,14 +31,14 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> bg.integer_validator("invalid tuple", (1,))
+>>> bg.integer_validator("invalid_tuple", (1,))
 Traceback (most recent call last):
 TypeError: invalid_tuple must be an integer
 
->>> bg.integer_validator("invalid list", [3])
+>>> bg.integer_validator("invalid_list", [3])
 Traceback (most recent call last):
-TypeError: invalid list must be an integer
+TypeError: invalid_list must be an integer
 
->>> bg.integer_validator("invalid set", {1, 3})
+>>> bg.integer_validator("invalid_set", {1, 3})
 Traceback (most recent call last):
-TypeError: invalid set must be an integer
+TypeError: invalid_set must be an integer
