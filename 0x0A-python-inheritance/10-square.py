@@ -11,4 +11,5 @@ class Square(Rectangle):
     '''
     def __init__(self, size):
         '''An init function'''
+        self.__size = size
         super().__init__(size, size)
