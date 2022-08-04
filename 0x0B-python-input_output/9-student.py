@@ -13,4 +13,4 @@ class Student:
         '''
         A function that returns an instance attribute.
         '''
-        Return self.__dict__
+        return self.__dict__
