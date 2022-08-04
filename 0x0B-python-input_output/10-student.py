@@ -16,7 +16,7 @@ class Student:
         new_dict = {}
         if (type(attrs) == list and all(isinstance(i, str) for i in attrs)):
             for i in attrs:
-                if i in new_dict:
+                if i in self.__dict__:
                     new_dict[i] = self.__dict__[i]
             return new_dict
         return self.__dict__
