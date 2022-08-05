@@ -11,7 +11,7 @@ def append_after(filename="", search_string="", new_string=""):
         a = f.readlines()
 
     for i in a[:]:
-        is search_String in i:
+        if search_String in i:
             line = a.index(i)
             a.insert(line, new_string)
 
