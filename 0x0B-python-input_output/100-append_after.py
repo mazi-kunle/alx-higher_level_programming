@@ -12,7 +12,7 @@ def append_after(filename="", search_string="", new_string=""):
 
     for i in a[:]:
         if search_string in i:
-            line = a.index(i)
+            line = a.index(i) + 1
             a.insert(line, new_string)
 
     with open(filename, 'w') as f:
