@@ -16,14 +16,18 @@ class test_max_integer(unittest.TestCase):
         a = []
         self.assertAlmostEqual(max_integer(a), None)
 
-    def test_max5(self):
+    def test_max4(self):
         a = [3,2,1]
         self.assertAlmostEqual(max_integer(a), 3)
 
-    def test_max6(self):
+    def test_max5(self):
         a = [2]
         self.assertAlmostEqual(max_integer(a), 2)
 
-    def test_max4(self):
+    def test_max6(self):
         a = ['a','b',1]
         self.assertRaises(TypeError, max_integer, a)
+        
+    def test_max7(self):
+        a = [1,4,2]
+        self.assertAlmostEqual(max_integer(a), 4)
