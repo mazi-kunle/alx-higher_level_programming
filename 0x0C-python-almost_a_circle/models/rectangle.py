@@ -2,7 +2,7 @@
 '''This is a module'''
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -20,9 +20,9 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self):
+    def width(self, value):
         '''A setter function for width'''
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -30,9 +30,9 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self):
+    def height(self, value):
         '''A setter function for height'''
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -40,9 +40,9 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self):
+    def x(self, value):
         '''A setter for x'''
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -50,6 +50,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self):
+    def y(self, value):
         '''A setter function for y'''
-        self.__y = y
+        self.__y = value
