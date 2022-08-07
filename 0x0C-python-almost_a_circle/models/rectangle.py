@@ -79,13 +79,36 @@ class Rectangle(Base):
     def display(self):
         '''A method that displays the rectangle with the # character.
         '''
+        [print('') for i in range(self.__y)]
         for row in range(self.__height):
+            print(' ' * self.__x, end='')
             for column in range(self.__width):
                 print('#', end='')
             print()
+        return ''
 
     def __str__(self):
         '''
         magic method.
         '''
         return (f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}')
+
+    def update(self, *args):
+        '''
+        assign an argument to each attribute
+
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute
+        '''
+        try:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+
+        except IndexError:
+            pass
