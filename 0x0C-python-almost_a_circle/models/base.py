@@ -60,6 +60,22 @@ class Base:
         '''
         returns an instance with all attributes already set:
         '''
-        dummy_instance = cls(1, 2)
-        cls.update(dictionary)
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls.__name__ == 'Rectangle':
+            dummy_instance = Rectangle(1, 2)
+        elif cls.__name__ == 'Square':
+            dummy_instance = Square(2)
+
+        dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def def load_from_file(cls):
+        '''
+        returns a list of instances:
+        '''
+        name_of_file = cls.__name__ + '.json'
+
+
