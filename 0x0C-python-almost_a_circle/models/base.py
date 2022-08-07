@@ -44,3 +44,13 @@ class Base:
 
         with open(name_of_file, 'w') as f:
             json.dump(d, f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''
+        return the list of the json string representation.
+        '''
+        if json_String is None or len(json_String) == 0:
+            return []
+
+        return json.loads(json_string)
