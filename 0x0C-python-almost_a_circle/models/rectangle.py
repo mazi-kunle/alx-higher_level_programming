@@ -117,3 +117,14 @@ class Rectangle(Base):
         else:
             for key, val in kwargs.items():
                 setattr(self, key, val)
+
+    def to_dictionary(self):
+        '''Returns the dictionary representation if a triangle'''
+        d = {}
+        d['x'] = self.x
+        d['y'] = self.y
+        d['id'] = self.id
+        d['height'] = self.height
+        d['width'] = self.width
+
+        return d
