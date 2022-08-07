@@ -45,8 +45,8 @@ class Square(Rectangle):
         '''Returns the dictionary representation of the sqaure'''
         d = {}
         d['id'] = self.id
-        d['size'] = self.size
         d['x'] = self.x
+        d['size'] = self.size
         d['y'] = self.y
 
         return d
