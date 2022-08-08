@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -101,7 +102,7 @@ class Base:
 
         with open(name_of_file, 'w', newline='') as f:
             if cls.__name__ == 'Rectangle':
-                fieldnames = ['id', 'width', 'heght', 'x', 'y']
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
             elif cls.__name__ == 'Square':
                 fieldnames = ['id', 'size', 'x', 'y']
 
@@ -127,7 +128,18 @@ class Base:
 
             reader = csv.DictReader(f, fieldnames=fieldnames)
             for row in reader:
-                instance = cls.create(**row)
-                lst.append(instance)
+                try:
+                    row['id'] = int(row['id'])
+                    row['x'] = int(row['x'])
+                    row['y'] = int(row['y'])
+                    row['width'] = int(row['width'])
+                    row['height'] = int(row['height'])
+
+                except KeyError:
+                    row['size'] = int(row['size'])
+
+                finally:
+                    instance = cls.create(**row)
+                    lst.append(instance)
 
         return lst
