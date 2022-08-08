@@ -77,5 +77,14 @@ class Base:
         returns a list of instances:
         '''
         name_of_file = cls.__name__ + '.json'
-
-
+        lst = []
+        try:
+            with open(name_of_file, 'r') as f:
+                json_list = cls.from_json_string(f.read())
+                for json_dict in json_list: 
+                    instance = cls.create(**json_dict)
+                    lst.append(instance)
+        except (FileNotFoundError):
+            pass
+        finally:
+            return lst
