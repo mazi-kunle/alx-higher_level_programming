@@ -119,7 +119,7 @@ class Rectangle(Base):
                 setattr(self, key, val)
 
     def to_dictionary(self):
-        '''Returns the dictionary representation if a triangle'''
+        '''Returns the dictionary representation of a rectangle'''
         d = {}
         d['x'] = self.x
         d['y'] = self.y

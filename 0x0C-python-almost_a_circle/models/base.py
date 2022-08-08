@@ -72,7 +72,7 @@ class Base:
         return dummy_instance
 
     @classmethod
-    def def load_from_file(cls):
+    def load_from_file(cls):
         '''
         returns a list of instances:
         '''
@@ -81,10 +81,53 @@ class Base:
         try:
             with open(name_of_file, 'r') as f:
                 json_list = cls.from_json_string(f.read())
-                for json_dict in json_list: 
-                    instance = cls.create(**json_dict)
-                    lst.append(instance)
+
+            for json_dict in json_list:
+                instance = cls.create(**json_dict)
+                lst.append(instance)
+
         except (FileNotFoundError):
             pass
+
         finally:
             return lst
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''
+        serialize a file in CSV.
+        '''
+        name_of_file = cls.__name__ + '.csv'
+
+        with open(name_of_file, 'w', newline='') as f:
+            if cls.__name__ == 'Rectangle':
+                fieldnames = ['id', 'width', 'heght', 'x', 'y']
+            elif cls.__name__ == 'Square':
+                fieldnames = ['id', 'size', 'x', 'y']
+
+            for instance in list_objs:
+                instance_dict = instance.to_dictionary()
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+                writer.writerow(instance_dict)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''
+        deserialize a file in CSV.
+        '''
+        name_of_file = cls.__name__ + '.csv'
+        lst = []
+
+        with open(name_of_file, 'r') as f:
+            if cls.__name__ == 'Rectangle':
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == 'Square':
+                fieldnames = ['id', 'size', 'x', 'y']
+
+            reader = csv.DictReader(f, fieldnames=fieldnames)
+            for row in reader:
+                instance = cls.create(**row)
+                lst.append(instance)
+
+        return lst
