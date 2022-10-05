@@ -7,7 +7,7 @@ if (process.argv.length <= 3) {
   let second = -Infinity;
   const arr = process.argv;
   for (let i = 2; i < arr.length; i++) {
-    a[i] = parseInt(a[i]);
+    arr[i] = parseInt(arr[i]);
     if (arr[i] > first) {
       second = first;
       first = arr[i];
