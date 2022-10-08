@@ -13,15 +13,16 @@ username = argv[1]
 password = argv[2]
 database = argv[3]
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(username,
-                       password, database))
+if __name__ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+                           username,
+                           password, database))
 
-Session = sessionmaker(bind=engine)
-session = Session()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
+    states = session.query(State).order_by(State.id).all()
+    for state in states:
+        print(f'{state.id}: {state.name}')
 
-states = session.query(State).order_by(State.id).all()
-for state in states:
-    print(f'{state.id}: {state.name}')
-
-session.close()
+    session.close()
