@@ -9,11 +9,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-username = argv[1]
-password = argv[2]
-database = argv[3]
-
 if __name__ == '__main__':
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
                            username,
                            password, database))
