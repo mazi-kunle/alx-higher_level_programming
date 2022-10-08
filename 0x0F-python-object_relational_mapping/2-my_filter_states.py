@@ -10,5 +10,6 @@ if __name__ == '__main__':
     cmd = "SELECT * FROM states WHERE name = '{}' ORDER BY id".format(
                                                                 sys.argv[4])
     cursor.execute(cmd)
-    for i in cursor.fetchall():
+    results = cursor.fetchall()
+    for i in results:
         print(i)
