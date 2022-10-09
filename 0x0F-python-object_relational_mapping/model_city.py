@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''
+This is a module.
+'''
 
 from sqlalchemy import Column, String, Integer, ForeignKeyConstraint
 from model_state import Base
