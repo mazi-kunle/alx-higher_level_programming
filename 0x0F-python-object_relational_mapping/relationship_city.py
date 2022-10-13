@@ -4,10 +4,10 @@ This is a module.
 '''
 
 from sqlalchemy import Column, String, Integer, ForeignKeyConstraint
-from model_state import Base
+from relationship_state import Base
 
 
-class City():
+class City(Base):
     '''
     A city table
     '''
