@@ -7,13 +7,15 @@ const filec = argv[4];
 
 const fs = require('fs');
 fs.readFile(filea, 'utf8', function (err, data) {
-  fs.writeFile(filec, data, function(err) {
+  if (err) { throw err; }
+  fs.writeFile(filec, data, function (err) {
     if (err) { throw err; }
   });
 });
 
 fs.readFile(fileb, 'utf8', function (err, data) {
-  fs.appendFile(filec, data, function(err) {
+  if (err) { throw err; }
+  fs.appendFile(filec, data, function (err) {
     if (err) { throw err; }
   });
 });
