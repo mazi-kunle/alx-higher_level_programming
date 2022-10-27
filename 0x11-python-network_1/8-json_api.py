@@ -17,7 +17,7 @@ if __name__ == '__main__':
                       data=data)
     try:
         json_data = r.json()
-    except requests.exceptions.JSONDecodeError:
+    except:
         print('Not a  valid JSON')
     else:
         if (len(json_data) == 0):
