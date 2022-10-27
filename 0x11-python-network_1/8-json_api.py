@@ -18,7 +18,7 @@ if __name__ == '__main__':
     try:
         json_data = r.json()
     except Exception as e:
-        print('Not a  valid JSON')
+        print('Not a valid JSON')
     else:
         if (len(json_data) == 0):
             print('No result')
